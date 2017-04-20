@@ -1,0 +1,605 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>TopStyle 5.0 Release Notes</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+<style type="text/css">
+		a { color: #274AAE; }
+		a:hover { color: #89A1E5; }
+		a.infotip { border-bottom: 1px dashed green; color: green; cursor: help; }
+		body { background-color: #FFFFFF; color: black; font: small/1.6em "Segoe UI", "Trebuchet MS", Tahoma, Verdana, sans-serif; padding: 6px 20px; }
+		code, h3 { font-size: 100%; }
+		div#build35, div#build40, div#build50, div#legal { color: gray; font-style: italic; margin-bottom: 20px; }
+		div#legal { text-align: right; }
+		h1 { font-size: 155%; margin-bottom: 6px; }
+		h2 { font-size: 110%; }
+		hr { color: silver; height: 1px; }
+		ol li { margin-bottom: 0; }
+		ul li { margin-bottom: 6px; }
+		ul ul { list-style-type: square; margin-bottom: 10px; margin-top: 10px; }
+		ul ul li { margin-bottom: 4px; }
+		.menu { font-family: monospace; }
+	</style>
+</head>
+<body>
+<h1>TopStyle 5.0 Release Notes</h1>
+<div id="build50">build 5.0.0.104 / July 10, 2014</div>
+<p><em>Tap into the power of CSS3 and HTML5</em></p>
+<h2>What's new in TopStyle 5.0</h2>
+<p>TopStyle 5 includes many new features to help you create and maintain CSS and (X)HTML documents that support best practices and the latest technologies.</p>
+<blockquote> <a href="#css3"><strong>CSS3</strong></a>
+  <blockquote> <a href="#css3">CSS3 for Inspector (Shift+F9) and Insight (Ctrl+Space) and Style Checker (F6)</a><br />
+    <a href="#prefixr">Prefixr</a><br />
+    <a href="#css3_media_queries">CSS3 Media Queries</a><br />
+    <a href="#css_gradient_generator">CSS Gradient Generator</a><br />
+    <a href="#text_shadow_generator">Text Shadow Generator</a><br />
+    <a href="#preview_files">Improved options for Preview Files</a> </blockquote>
+  <a href="#html5"><strong>HTML5</strong></a>
+  <blockquote> <a href="#html5">HTML5 for Inspector (Shift+F9) and Insight (Ctrl+Space)</a><br />
+    <a href="#html5_validator">HTML5-only Validator</a><br />
+	<a href="#html5_tidy">HTML Tidy for HTML5</a><br />
+    <a href="#html_structure_panel">HTML Structure Panel</a><br />
+    <a href="#wrap_html_tag">Wrap HTML Tag</a><br />
+    <a href="#img_map_editor">Image Map Editor</a> </blockquote>
+  <p><strong>Preview</strong></p>
+  <blockquote> <a href="#chrome">Use Google Chrome as the internal browser</a><br />
+    <a href="#xray">XRAY: look beneath the skin</a><br />
+    <a href="#synchronize">Preview and editor synchronization (HTML-only)</a> </blockquote>
+  <p><strong>Organize your CSS</strong></p>
+  <blockquote> <a href="#css_groups">CSS Groups</a><br />
+    <a href="#css_tidy">CSS Tidy</a><br />
+    <a href="#brace_matching">Brace matching</a> </blockquote>
+  <a href="#insight"><strong>Insight (Ctrl+Space)</strong></a>
+  <blockquote> <a href="#insight">Filter the drop-down list while typing</a><br />
+    <a href="#browser_compatibility_icons">Browser compatibility icons</a><br />
+    <a href="#google_web_fonts">Google Web Fonts</a> </blockquote>
+  <p><strong>CSS Colors</strong></p>
+  <blockquote> <a href="#highlight_css_colors">Highlight CSS color values</a><br />
+    <a href="#css_color_edit">Improved CSS color editing</a><br />
+    <a href="#color_contrast_analyser">Color Contrast Analyser</a> </blockquote>
+  <p><strong>Editing Made Easier</strong></p>
+  <blockquote> <a href="#sftp">SFTP (SSH File Transfer Protocol)</a><br />
+    <a href="#file_history">File History</a><br />
+    <a href="#syncedit">Highlight all occurrences of selected text</a><br />
+    <a href="#css_prop_help">Improved property help (Ctrl+click)</a><br />
+    <a href="#find_replace_files">Improved Find/Replace in Files</a><br />
+    <a href="#auto_replace">Improved Auto-Replace</a><br />
+    <a href="#workspaces">Workspaces</a><br />
+    <a href="#smart_copy_paste">Smart Copy and Paste</a><br />
+    <a href="#quick_access_panel">Quick Access Panel</a><br />
+    <a href="#drag_n_drop">Drag-and-drop editing</a><br />
+    <a href="#new_menu_layout">New menu layout</a><br />
+    <a href="#new_ide_colors">New IDE colors</a><br />
+    <a href="#iwebkit5">iWebKit 5</a> </blockquote>
+</blockquote>
+<h3><a name="css3" id="css3"></a>CSS3</h3>
+<blockquote>
+  <p>TopStyle 5 includes a new style definition for <a href="http://en.wikipedia.org/wiki/CSS3#CSS_3" target="_blank">CSS3</a>. This new CSS3 definition is powering many TopStyle features, including the <em>Inspector</em> (Shift+F9), <em>Insight</em> (Ctrl+Space), and <em>Style Checker</em> (F6).</p>
+</blockquote>
+<h3><a name="prefixr" id="prefixr"></a>Prefixr</h3>
+<blockquote>
+  <p><a href="#css3">CSS3</a> is great, but not every web browser out there fully supports CSS3 and CSS3 itself has not reached its final release stage. That is why some web browsers require so-called <em>vendor-prefixed</em> properties. The vendor prefixes ensure that there are no clashes with the changing specification and to allow the browser maker to start supporting experimental CSS properties.</p>
+  <p>Of course, keeping up with these vendor-prefixed properties (supporting them, remembering them, etc) is hard. In an ideal world, the web developer should have to focus on standards-compliant CSS properties only.</p>
+  <p><em>Prefixr</em> to the rescue. Prefixr will filter your (standards-compliant) CSS3 properties and dynamically update them, adding (vendor-prefixed) properties for cross-browser compatibility.</p>
+  <p>Here's an example. Suppose you have this style sheet:</p>
+  <p><img src="prefixr_1.png" width="344" height="129" /></p>
+  <p>You can update an entire style sheet, or a few rules, or a few properties. Simply select the CSS you would like to &quot;prefixize&quot; and then select: <em>CSS &gt; Prefixize</em>.</p>
+  <p><img src="prefixr_2.png" width="403" height="175" /></p>
+  <p>While creating your style sheets in TopStyle, you focus on the standards-compliant properties and do not worry about browser support. Then when you're done, you let <em>Prefixr</em> do the nasty work and convert your (standards-compliant) CSS3 properties into (vendor-prefixed) properties for cross-browser compatibility.</p>
+</blockquote>
+<h3><a name="css3_media_queries" id="css3_media_queries"></a>CSS3 Media Queries</h3>
+<blockquote>
+  <p>CSS2 allows you to specify a stylesheet for specific media type such as screen or print. Now <a href="#css3">CSS3</a> makes it even more efficient by adding media queries. You can add expressions to media type to check for certain conditions and apply different stylesheets. For example, you can have one stylesheet for large displays and a different stylesheet specifically for mobile devices. It is quite powerful because it allows you to tailor to different resolutions and devices without changing the content.</p>
+  <p>When you add a Style Sheet <code>&lt;link&gt;</code> or <code>@import</code> Rule to your document, TopStyle now supports CSS3 media queries:</p>
+  <p><img src="css3_media_queries.png" width="539" height="280" /></p>
+  <p>In this example, the style sheet you're adding to your document  will apply if the maximum width of the device is 480px (eg. iPhone display).</p>
+</blockquote>
+<h3><a name="css_gradient_generator" id="css_gradient_generator"></a>CSS Gradient Generator</h3>
+<blockquote>
+  <p><a href="#css3">CSS3</a> and <a href="#html5">HTML5</a> are introducing many exciting features for web developers. One of the features is the ability to specify gradients using pure <a href="#css3">CSS3</a>, without having to create any images and use them as repeating backgrounds.</p>
+  <p><em>Style Insight</em> (Ctrl+Space) includes a CSS Gradient Generator for <code>background-image</code>:</p>
+  <p><img src="css_gradient_generator_1.png" width="406" height="171" /></p>
+  <p>When you pick <code>linear-gradient</code> from <em>Style Insight</em> (Ctrl+Space), the CSS Gradient Generator appears:</p>
+  <p><img src="css_gradient_generator_2.png" width="606" height="303" /> </p>
+  <p>From here, you can change the orientation (horizontal, vertical, or diagonal) and the colors that make up the gradient. When you click OK, TopStyle 5 will insert the <code>linear-gradient</code> function into your document:</p>
+  <p><img src="css_gradient_generator_3.png" width="601" height="93" /></p>
+</blockquote>
+<h3><a name="text_shadow_generator" id="text_shadow_generator"></a>Text Shadow Generator</h3>
+<blockquote>
+  <p><a href="#css3">CSS3</a> has a property called <code>text-shadow</code> (a slightly moved, slightly blurred copy of a text).</p>
+  <p>The TopStyle 5 <em>Text Shadow Generator</em> is a built-in property editor for the <code>text-shadow</code> property:</p>
+  <p><img src="text_shadow_1.png" width="433" height="222" /></p>
+  <p>When you pick <strong>Text Shadow Generator...</strong> from <em>Style Insight</em> (Ctrl+Space), the Text Shadow Generator window appears:</p>
+  <p><img src="text_shadow_2.png" width="532" height="367" /> </p>
+  <p>The simplest form of the <code>text-shadow</code> property has two parts: a color (such as #a5a5a5 above) and an offset (2px 2px in the example above). This results in a sharp shadow at the indicated offset. But the offset can also be made fuzzy, resulting in a more or less blurred shadow. </p>
+</blockquote>
+<h3><a name="preview_files" id="preview_files"></a>Improved options for Preview Files (CSS-only) </h3>
+<blockquote>
+  <p>Starting with TopStyle 5, we have added the following options for Preview Files:</p>
+  <ul>
+    <li>move most recently used preview file(s) to the top of the list</li>
+    <li>include HTML documents that are in the same directory (as your CSS document)</li>
+    <li>include HTML documents that are open (in other tabs) </li>
+  </ul>
+</blockquote>
+<h3><a name="html5" id="html5"></a>HTML5</h3>
+<blockquote>TopStyle 5 includes a new HTML5 definition. This new HTML5 definition is powering the <em>Inspector</em> (Shift+F9) and <em>Insight</em> (Ctrl+Space).</blockquote>
+<h3><a name="html5_validator" id="html5_validator"></a>HTML5-only Validator</h3>
+<blockquote>TopStyle 5 includes a new HTML5-only validator. Thanks to this HTML5 validator, TopStyle 5 makes  quality assurance of HTML5 less time consuming than it used to be. </blockquote>
+<h3><a name="html5_tidy" id="html5_tidy"></a>HTML Tidy for HTML5</h3>
+<blockquote>TopStyle 5 includes the HTML5 fork of HTML Tidy, and supports all the new configuration options.</blockquote>
+<h3><a name="html_structure_panel" id="html_structure_panel"></a>HTML Structure Panel</h3>
+<blockquote>
+  <p>The HTML Structure Panel appears  below the code editor, and displays the hierarchy of HTML tags that leads up to your editing position.</p>
+  <ol>
+    <li>Open an HTML document</li>
+    <li>Place the insertion point into some nested code</li>
+    <li>The HTML Structure Panel appears below the code editor</li>
+  </ol>
+  <p><img src="html_structure_panel_1.png" width="281" height="315" /></p>
+  <p>When you click on one of the buttons in the HTML Structure Panel, TopStyle 5 will select the corresponding HTML tag (and its contents) in the code editor:</p>
+  <p><img src="html_structure_panel_2.png" width="281" height="315" /></p>
+  <p>In addition to the HTML Structure Panel, TopStyle 5 comes with the following new menu items: </p>
+  <ul>
+    <li>Edit > Select Parent HTML Tag (Ctrl+[)</li>
+    <li>Edit > Select Child HTML Tag (Ctrl+])</li>
+  </ul>
+  <p>When you click one of these menu items, the enclosing matching tags (and their contents) are selected in your code.</p>
+  <p>Note: If you keep clicking <em>Edit > Select Parent HTML Tag</em>, and your tags are balanced, eventually TopStyle 5 will select the outermost <code>&lt;html&gt;</code> and <code>&lt;/html&gt;</code> tags.</p>
+</blockquote>
+<h3><a name="wrap_html_tag" id="wrap_html_tag"></a>Wrap HTML Tag</h3>
+<blockquote>
+  <p>While TopStyle easily provides auto tag closing (you type the <code>&lt;a&gt;</code> and TopStyle will automatically close the tag with <code>&lt;/a&gt;</code>), it also allows you to easily wrap an HTML tag: </p>
+  <ol>
+    <li>Click in some HTML tag</li>
+    <li>Select: <em>Edit &gt; Wrap HTML Tag</em></li>
+    <li>Start typing to move quickly to the element name you want to wrap the tag in, using the up and down arrow keys if needed (see figure below) </li>
+    <li>Press OK (or the Enter key) when you're done</li>
+  </ol>
+  <img src="wrap_html_tag.png" width="307" height="189" />
+  <p>Your HTML tag should now be wrapped in a new HTML tag, without you having to manually locate the position for the open tag and the close tag. </p>
+</blockquote>
+<h3><a name="img_map_editor" id="img_map_editor"></a>Image Map Editor (HTML-only)</h3>
+<blockquote>
+  <p>An image map is an image that has been divided into areas, or &quot;hotspots&quot;; when the user clicks a hotspot, an action occurs (for example, your reader is taken to another Web page).</p>
+  <p>TopStyle 5 has a built-in image map editor that makes it easy to create image maps for your Web pages:</p>
+  <p> 1. Add an image</a> to your Web page (the easiest way to accomplish this is to drag the <em>Image</em> icon from the <em>Common</em> tab of the <a href="#html_toolbar">HTML toolbar</a> into your Web page) <br />
+    2. Right-click somewhere in the <code>&lt;img&gt;</code> tag. </p>
+  <img src="img_map_editor_1.png" width="339" height="280" />
+  <p> 3. From the drop-down menu, click on <em>Image Map Editor...</em><br />
+    4. Click anywhere on the image, hold down the mouse button, and draw the shape you want on your image. </p>
+  <img src="img_map_editor_2.png" width="641" height="574" />
+  <p>5. Continue adding hotspots until your map is complete (you can add multiple hotspot areas to your image map) <br />
+    6. Click on the OK button when you're done adding hotspots.</p>
+  <img src="img_map_editor_3.png" width="854" height="180" />
+  <p> 7. Click in the <code>href</code> attribute, bring up <em>Insight</em> (Ctrl+Space), and select the URL you want the reader to navigate to when he/she clicks on the hotspot.<br />
+    8. Preview your image map in a web browser to make sure it works correctly. </p>
+  <p>Editing existing hotspots is easy. Bring up the <em>Image Map Editor</em> (see above), and then click an existing hotspot to select it. From here, you can move, re-size, and/or delete the hotspot(s).</p>
+</blockquote>
+<h3><a name="chrome" id="chrome"></a>Use Google Chrome as the internal browser </h3>
+<blockquote>
+  <p><img src="chromium.png" width="378" height="151" /></p>
+  <p>TopStyle's internal preview panel has always supported both Internet Explorer and Mozilla Gecko (Firefox). TopStyle 4 introduced Apple Safari to the mix. Now TopStyle 5 introduces Google Chrome as the internal browser. This Google Chrome-based internal preview is installed out-of-the-box, without you having to download and install anything separately. In other words: this feature works, even if you do not have Google Chrome installed on your computer. </p>
+</blockquote>
+<h3><a name="xray" id="xray"></a>XRAY: look beneath the skin</h3>
+<blockquote>
+  <p><img src="xray.png" width="1056" height="385" /> </p>
+  <p>XRAY helps you visualize the layout of your page. When you click the XRAY button on the Preview panel's toolbar, the XRAY panel comes up. Now when you click any element on the page, the XRAY panel displays the position, margins, padding, and dimensions of the element.</p>
+  <p>Basically, you click the XRAY button to instantly answer those vital questions: where is the top and left of this element? how big is each margin? how big is the padding? how wide and high is the content box?</p>
+  <p>In addition to these details, the XRAY panel also displays the CSS selector(s) that apply to the element. When you click on such a CSS selector in the XRAY panel, TopStyle will automatically navigate to this CSS rule in the editor panel (even if that CSS rule is in some other document!)</p>
+</blockquote>
+<h3><a name="synchronize" id="synchronize"></a>Preview and editor synchronization (HTML-only) </h3>
+<blockquote>
+  <p><img src="synchronize.png" width="369" height="74" /></p>
+  <p>When you select some text in the TopStyle 5 preview panel, the cursor position in the editor will automatically synchronize  with the corresponding text. </p>
+</blockquote>
+<h3><a name="css_groups" id="css_groups"></a>CSS Groups</h3>
+<blockquote>
+  <p>Inspired by CSSEdit, TopStyle 5 introduces CSS groups. Basically, this serves as an organization method for your CSS selectors, and in the CSS Selector Panel (<em>View &gt; Panels &gt; CSS Selector Panel</em>) you can view them in a folder-based layout.</p>
+  <p>One of the most daunting things about building and maintaining a web site  can be wading through huge, disorganized style sheets. Nothing is worse   than opening up a style sheet someone else has worked on and thinking,   &quot;what the heck happened here?&quot;. One of TopStyle's most powerful features is its ability to group CSS selectors into a folder structure.</p>
+  <p>Creating a new CSS group starts here. Select a few CSS rule(s) and then click on: <em>CSS &gt; New CSS Group</em>:</p>
+  <p><img src="css_groups_1.png" width="307" height="162" /> </p>
+  <p>Enter a name for your CSS group, and TopStyle will insert the following into your document:</p>
+  <p><code>/* @group GroupName1 */</code></p>
+  <p><code>/* @end */</code></p>
+  <p>If you&rsquo;re not using CSSEdit or TopStyle, these group comments are just harmless little comments (in other words: they degrade gracefully in other editors). In TopStyle however, you can (un)fold your CSS groups in the editor, and  view them in a folder-based layout in the CSS Selector Panel (<em>View &gt; Panels &gt; CSS Selector Panel</em>)</p>
+  <p><img src="css_groups_2.png" width="440" height="312" /></p>
+</blockquote>
+<h3><a name="css_tidy" id="css_tidy"></a>CSS Tidy</h3>
+<blockquote>
+  <p><img src="csstidy.png" width="495" height="472" /></p>
+  <p>TopStyle 5 includes (and integrates with) <a href="http://csstidy.sourceforge.net/" target="_blank">CSS Tidy</a>, a CSS parser and optimiser. Thanks to CSS optimisation, you have faster loading pages and lower traffic costs. You can also use CSS Tidy to format (or fix) your style sheets for browser compatibility.</p>
+</blockquote>
+<h3><a name="brace_matching" id="brace_matching"></a>Brace matching</h3>
+<blockquote>
+  <p>When you select a brace, TopStyle 5 will automatically highlight the matching brace:</p>
+  <p><img src="brace_matching.png" width="270" height="140" /></p>
+  <p>Brace matching gives you immediate feedback on misplaced brackets and parentheses. The purpose is to help you navigate through your document(s) and also   spot any improper matching, which could cause your website to malfunction. </p>
+  <p>You can enable (or disable) brace matching here: <em>Options (F8) &gt; Editor &gt; Highlight matching brackets and parentheses</em></p>
+</blockquote>
+<h3><a name="insight" id="insight"></a>Improved Insight (Ctrl+Space)</h3>
+<blockquote>
+  <p>&bull; Starting with TopStyle 5, <em>Insight</em> (Ctrl+Space) will filter the drop-down list while typing (show only those items that match what you have typed). This makes searching though the drop-down list a whole lot easier. You can toggle this new feature here: <em>Options (F8) &gt; Editor &gt; Insight &gt; &quot;filter the list while typing&quot;</em>.</p>
+  <p>&bull; When creating new CSS selectors while you're inside a <code>&lt;style&gt;</code> tag, <em>Style Insight</em> will list HTML element names:</p>
+  <p><img src="insight_selectors_1.png" width="298" height="290" /></p>
+  <p>&bull; If you enter a dot while you're inside a <code>&lt;style&gt;</code> tag, <em>Style Insight</em> will list the <code>class=</code> attribute value(s) that are in your HTML document: </p>
+  <p><img src="insight_selectors_2.png" width="379" height="287" /></p>
+  <p>&bull; In addition to these improvements, <em>Insight</em> includes lots of other improvements such as <a href="#browser_compatibility_icons">browser compatibility icons</a>, <a href="#google_web_fonts">Google web fonts</a>, <a href="#css_gradient_generator">CSS gradient generator</a>, <a href="#text_shadow_generator">text shadow generator</a>, etc. </p>
+</blockquote>
+<h3><a name="browser_compatibility_icons" id="browser_compatibility_icons"></a>Browser compatibility icons</h3>
+<blockquote>
+  <p>When you bring up <em>Style Insight</em> (Ctrl+Space) for a CSS property, TopStyle 5 will display browser compatibility icons for each and every property name:</p>
+  <p><img src="browser_compatibility_icons.png" width="445" height="245" /></p>
+  <p>In this example, <code>box-sizing</code> is supported by all web browsers, <code>columns</code> is supported by Chrome and Safari, and <code>column-fill</code> is supported by Firefox only.</p>
+</blockquote>
+<h3><a name="google_web_fonts" id="google_web_fonts"></a>Google Web Fonts</h3>
+<blockquote>
+  <p>Google provides lots of <a href="http://www.google.com/webfonts" target="_blank">high-quality web fonts</a> that work in most browsers. TopStyle 5 now supports automatic insertion of these fonts into your page(s). </p>
+  <p>You don't need to do any programming; all you have to do is to bring up <em>Style Insight</em> (Ctrl+Space) while in a <code>font-family</code> property, either in a <code>&lt;style&gt;</code> block:</p>
+  <p><img src="google_web_fonts_1.png" width="591" height="294" /> </p>
+  <p>...or with an inline style on the element itself:</p>
+  <p><img src="google_web_fonts_2.png" width="636" height="324" /> </p>
+  <p>Now select &quot;Google Web Font...&quot; and this new property editor will appear:</p>
+  <p><img src="google_web_fonts_3.png" width="522" height="483" /> </p>
+  <p>Check one (or more) font, and click OK. TopStyle 5 will insert the font(s) into your page:</p>
+  <p><img src="google_web_fonts_4.png" width="867" height="296" /> </p>
+  <p>Note: in addition to the font family name, TopStyle 5 optionally adds a stylesheet <code>&lt;link&gt;</code> to the <code>&lt;head&gt;</code> section of your web page (recommended).</p>
+  <p>Now take a look at the Preview Panel (Ctrl+D). You should see a page displaying the following, in the font called Tangerine: </p>
+  <p style="font-family: 'Tangerine',serif; font-size: 32px;">Making the Web Beautiful!</p>
+  <p>That sentence is ordinary text, so you can change how it looks by using CSS. Try adding a shadow to the style in the previous example:</p>
+  <p><img src="google_web_fonts_5.png" width="413" height="231" /></p>
+  <p>You should now see a drop shadow under the text:</p>
+  <p style="font-family: 'Tangerine',serif; font-size: 32px; text-shadow: 4px 4px 4px rgb(170, 170, 170);">Making the Web Beautiful!</p>
+  <p>Note: when specifying a web font in a CSS style, always   list at least one fallback web-safe font in order to avoid unexpected   behaviors. In particular, add a CSS generic font name like <code>serif</code> or <code>sans-serif</code> to the end of the list, so the browser can fall back to its default fonts if need be.</p>
+</blockquote>
+<h3><a name="highlight_css_colors" id="highlight_css_colors"></a>Highlight CSS color values </h3>
+<blockquote>
+  <p><img src="highlight_css_colors.png" width="339" height="131" /></p>
+  <p>When turned on, this new setting will highlight CSS color values with the actual color they represent. </p>
+</blockquote>
+<h3><a name="css_color_edit" id="css_color_edit"></a>Improved CSS color editing </h3>
+<blockquote>
+  <p><img src="color_swatch.png" width="327" height="119" /></p>
+  <ul>
+    <li>TopStyle 5 displays a little color swatch below every CSS color value. When you click on this color swatch, the color dialog appears. From here, you can easily change the color value. </li>
+    <li>When you triple-click on a color value in the editor, the color dialog appears. From here, you can easily change the color under the mouse cursor. </li>
+  </ul>
+</blockquote>
+<h3><a name="color_contrast_analyser" id="color_contrast_analyser"></a>Color Contrast Analyser</h3>
+<blockquote>
+  <p>The Color Contrast Analyser allows you to specify a foreground and a background color and then determine if they provide enough of a contrast &quot;when viewed by someone having color deficits or when viewed on a black and white screen&quot;.</p>
+  <p>Right-click in a color value and click on <em>Select 1st Color to Compare</em>. Then right-click in another color value and click on <em>Compare Color Contrast... </em></p>
+  <p><img src="color_contrast_1.png" width="286" height="198" /> </p>
+  <p>...the Color Contrast Analyser appears:</p>
+  <p><img src="color_contrast_2.png" width="590" height="394" /> </p>
+  <p>The Color Contrast Analyser will indicate that your colors pass the following tests if they exceed  their threshold:</p>
+  <ul>
+    <li>Brightness difference (should be greater than 125) </li>
+    <li>Color  difference (should be greater than 500) </li>
+    <li>Contrast ratio (should be at least 5:1) </li>
+  </ul>
+  <p>In addition to this Color Contrast Analyser, the <em>Style Checker</em> (F6) will validate that any CSS rule with a (foreground) color and background color has sufficient contrast and produce a warning if not:</p>
+  <p><img src="color_contrast_3.png" width="754" height="295" /></p>
+</blockquote>
+<h3><a name="sftp" id="sftp"></a>SFTP (SSH File Transfer Protocol)</h3>
+<blockquote>
+  <p>In addition to <a href="http://en.wikipedia.org/wiki/FTP" target="_blank">FTP</a> (previously introduced in TopStyle 4), TopStyle 5 now includes support for <a href="http://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol" target="_blank">SFTP</a>. The FTP Explorer Panel allows you to drag-and-drop documents from your SFTP site into the TopStyle editor. When you save your document, it is automatically uploaded to your SFTP site.</p>
+</blockquote>
+<h3><a name="file_history" id="file_history"></a>File History</h3>
+<blockquote>
+  <p>TopStyle 5 creates a backup every time you update and save a document. If you want to manage your backups, then right-click a document tab, and select <em>History</em>... </p>
+  <p><img src="file_history_0.png" width="274" height="228" /></p>
+  <p>The File History dialog appears:</p>
+  <p><img src="file_history_1.png" width="391" height="290" /></p>
+  <p>From here, you can open a backup, compare differences between revisions, or roll back to a backup (restore a previous revision). </p>
+  <p> By default, TopStyle maintains 10 backups for documents that are updated and then saved. You can change these settings here: <em>Options (F8) &gt; General &gt; File History</em></p>
+  <p><img src="file_history_2.png" width="626" height="250" /></p>
+</blockquote>
+<h3><a name="syncedit" id="syncedit"></a>Highlight all occurrences of selected text</h3>
+<blockquote>
+  <p>TopStyle 5 allows you to highlight (and replace!) multiple occurrences of text (for example: a JavaScript function name) in your document.</p>
+  <p>When you select some text, a new button labeled &quot;highlight all occurrences of...&quot; appears in the gutter:</p>
+  <p><img src="sync_edit_1.png" width="830" height="379" /></p>
+  <p>Click this button, and TopStyle will highlight all occurrences of your selected text:</p>
+  <p><img src="sync_edit_2.png" width="830" height="379" /> </p>
+  <p>Now start typing, and TopStyle will replace all occurrences with what you typed!</p>
+  <p>Note: if you would like to bail out of this feature, you can simply click the button in the gutter again, or move the caret to some other position in your document. </p>
+</blockquote>
+<h3><a name="css_prop_help" id="css_prop_help"></a>Improved property help (Ctrl+click) </h3>
+<blockquote>
+  <p><img src="csss_prop_help.png" width="274" height="63" /></p>
+  <p>When you click on a CSS property name while holding the Ctrl key down, detailed help on the CSS property will appear. Starting with TopStyle 5, we have added <em>CSE HTML Validator Help</em> to the potential references for this feature.</p>
+  <p>In addition to <em>Ctrl+click</em>,   help for a CSS property will also appear when you press F1 while the caret is in a CSS property name.</p>
+  <p>Last but not least, we have added help for HTML elements! Press F1 while the caret is in an HTML tag, and detailed help on the HTML element  will appear. </p>
+</blockquote>
+<h3><a name="find_replace_files" id="find_replace_files"></a>Improved Find/Replace in Files </h3>
+<blockquote>
+  <p>TopStyle 5 adds support for (S)FTP to <em>Find/Replace in Files</em>. Starting with TopStyle 5, you can search a remote (<a href="http://en.wikipedia.org/wiki/FTP" target="_blank">FTP</a> or <a href="#sftp">SFTP</a>) site in the same manner as a local folder:</p>
+  <p><img src="find_replace_files_1.png" width="670" height="585" /> </p>
+  <p>Starting with TopStyle 5, we have added the following new options to <em>Find/Replace in Files</em>:</p>
+  <ul>
+    <li>in the folder of the current document</li>
+    <li>in the folder of the current document and its subfolders </li>
+  </ul>
+  <img src="find_replace_files_2.png" width="630" height="538" /> </blockquote>
+<h3><a name="auto_replace" id="auto_replace"></a>Improved Auto-Replace</h3>
+<blockquote>
+  <p>TopStyle 5 includes greatly improved auto-replace, adding the following new features:</p>
+  <p><img src="auto_replace.png" width="626" height="488" /></p>
+  <ul>
+    <li>multi-line items; now you can replace your text with multiple lines</li>
+    <li>use variables to have TopStyle prompt for custom text before replacing your text</li>
+    <li>support for document type (CSS or HTML); now you can have separate items for CSS and HTML</li>
+  </ul>
+</blockquote>
+<h3><a name="workspaces" id="workspaces"></a>Workspaces</h3>
+<blockquote>
+  <p>TopStyle 5  helps you manage your documents with <em>workspaces</em>.</p>
+  <p>A workspace remembers remembers "things" about the documents you're working on. For example: a workspace remembers your previously opened documents, and then restores those  at start-up. When you switch to another   workspace, the documents of that workspace are opened, and if you switch back to the former workspace, your previously   opened documents are restored. This is extremely useful when working on   several projects at the same time. </p>
+  <p>By default, TopStyle stores everything in a built-in workspace named &quot;TopStyle Default&quot;. However, you can create a new workspace (<em>File &gt; New Workspace</em>) or open another workspace (<em>File &gt; Open Workspace</em>). Saving a new workspace is just like saving a normal document - you simply choose   a name for the workspace.</p>
+  <p>In addition to your previously opened documents, a TopStyle workspace restores...<br />
+    &bull; your last File Explorer directory<br />
+    &bull; your last Style definition<br />
+    &bull; your last TopStyle site<br />
+    &bull; your last <a href="#preview_files">Preview File</a></p>
+</blockquote>
+<h3><a name="smart_copy_paste" id="smart_copy_paste"></a>Smart Copy and Paste</h3>
+<blockquote>
+  <p>Copy (Ctrl+C) and Paste (Ctrl+V) is a simple task to perform and every editor is doing it, but there is a way to make it even simpler and faster.</p>
+  <p> The idea behind <em>Smart Copy</em> is that you do not need to select anything. Whenever the caret is on a word that's not selected,   pressing Ctrl+C (or Ctrl+X) creates the selection for you and then copies (or cuts) the selection to the clipboard.</p>
+  <p>Because you need normal Paste most of the time, <em>Smart Paste</em> (Ctrl+Shift+V) selects the current word and then overwrites this with the text you have on the clipboard. </p>
+  <p>Note: <em>Smart Copy and Paste</em> selects whatever would be   selected by double clicking in the exact position.</p>
+</blockquote>
+<h3><a name="quick_access_panel" id="quick_access_panel"></a>Quick Access Panel</h3>
+<blockquote>
+  <p>Inspired by HomeSite, TopStyle 5 now includes a vertical toolbar with quick access to: (un)indent, <a href="#wrap_html_tag">wrap tag</a>, word wrap, hidden character toggle, line numbers, split screen, full screen toggle, and other useful items.</p>
+</blockquote>
+<h3><a name="drag_n_drop" id="drag_n_drop"></a>Drag-and-drop editing</h3>
+<blockquote>
+  <p>TopStyle 5 re-introduces something that is long overdue: drag-and-drop editing. </p>
+</blockquote>
+<h3><a name="new_menu_layout" id="new_menu_layout"></a>New menu layout</h3>
+<blockquote>
+  <p>Over the years, the TopStyle menus have grown a lot, and the organization of those menus hasn't always, uhm, made sense. For TopStyle 5, we decided to re-design the TopStyle menus. Everything CSS-related is now under a new <em>CSS</em> menu, and the confusing <em>Tools</em> menu is gone.</p>
+</blockquote>
+<h3><a name="new_ide_colors" id="new_ide_colors"></a>New IDE colors </h3>
+<blockquote>
+  <p>TopStyle 5 includes new syntax color coding based upon the <a href="http://ethanschoonover.com/solarized" target="_blank">Solarized</a> color scheme. </p>
+</blockquote>
+<h3><a name="iwebkit5" id="iwebkit5"></a>iWebKit 5</h3>
+<blockquote>
+  <p>TopStyle 5 includes iWebKit 5 - a framework designed to help you create your own iPhone, iPod Touch and iPad compatible website or webapp.</p>
+  <ul>
+    <li>Start a new iWebKit 5 project via <code>File &gt; New Site &gt; iWebKit</code>.</li>
+    <li>Add a new iWebKit 5 page to your site via <code>File &gt; New HTML Document &gt; iWebKit</code>. </li>
+    <li>the <a href="#html_toolbar">HTML toolbar</a> contains an iWebKit tab, providing easy access to most of the commonly used iWebKit elements (such as navigation buttons, menus, lists, form elements, etc). </li>
+  </ul>
+  <p>In a couple of minutes you will have created a professional looking mobile website. iWebKit is the framework of choice because it is very easy to use, loads extremely fast, and is compatible with all iOS devices.</p>
+</blockquote>
+<hr />
+<h1>TopStyle 4.0 Release Notes</h1>
+<div id="build40">build 4.0.0.92 / July 29, 2011</div>
+<p>Tap into the power of cascading style sheets (CSS) and (X)HTML.</p>
+<h2>What's new in TopStyle 4.0</h2>
+<p>TopStyle 4 includes many new features to help you create and maintain CSS and (X)HTML documents that support best practices and the latest technologies.</p>
+<h3>Unicode</h3>
+<blockquote>
+  <p>When you save your (X)HTML document (<code>File > Save As</code>), you can optionally select encoding for your document. TopStyle allows you to save your document ANSI-encoded (the TopStyle 3.x default), or Unicode-encoded (UTF-8 or UTF-16).</p>
+  <p>When you open an existing document (<code>File > Open</code>), TopStyle will try and auto-detect the encoding for the document you're trying to open. If the document you're trying to open does not contain a <a href="http://en.wikipedia.org/wiki/Byte_Order_Mark" target="_blank">BOM (byte-order mark)</a>, auto-detect assumes your document is ANSI-encoded (the TopStyle 3.x default).</p>
+  <p>Note: TopStyle will always include a <a href="http://en.wikipedia.org/wiki/Byte_Order_Mark" target="_blank">BOM (byte-order mark)</a> with your Unicode-encoded documents.</p>
+</blockquote>
+<h3>Live FTP editing</h3>
+<blockquote>
+  <p>TopStyle allows you to edit online documents via <a href="http://en.wikipedia.org/wiki/FTP" target="_blank">FTP (File Transfer Protocol)</a>. The new FTP Explorer Panel (<code>View > Panels > FTP Explorer Panel</code>) allows you to drag-and-drop documents from your FTP site(s) into the TopStyle editor. Alternatively, you can select <code>File > Open from FTP</code> from the TopStyle menu.</p>
+  <p>Note: when you save your document, it is automatically uploaded to your FTP site. TopStyle makes FTP totally transparent. You are not bothered with downloading (and/or uploading) your document(s) by hand.</p>
+  <p>Last but not least, you can upload your local documents (the ones not downloaded from a FTP site) to your FTP site(s) via <code>File > Save to FTP</code>.</p>
+</blockquote>
+<h3><a name="html_toolbar" id="html_toolbar"></a>HTML toolbar</h3>
+<blockquote>
+  <p>TopStyle comes with a new, user-configurable HTML toolbar (<code>View > Show HTML Toolbar</code>) that is displayed above the editor. By default, this HTML toolbar is available to (X)HTML documents only, but you can optionally enable it for CSS documents too via <code>Options (F8) > HTML Settings > HTML Toolbar</code>.</p>
+  <p>Simply click and hold down the mouse button on an HTML toolbar item, and then drag the item from the HTML toolbar anywhere into your document. When you release your mouse button, a snippet is inserted into your document. Some HTML toolbar items optionally display a dialog where you can configure the snippet before it is inserted.</p>
+  <p>You can apply an HTML toolbar item to selected text as well. Select some text in your document, then click an HTML toolbar item and release the mouse button without dragging the item out of the HTML toolbar.</p>
+  <p>Note: HTML toolbar items are stored under <code>\Documents and Settings\&lt;username&gt;\Application Data\Bradsoft.com\TopStyle\4.0</code> (Windows XP) or <code>\Users\&lt;username&gt;\AppData\Roaming\Bradsoft.com\TopStyle\4.0</code> (Windows Vista). Advanced users can create their own HTML toolbar items.</p>
+</blockquote>
+<h3>New style definitions</h3>
+<blockquote>
+  <p>TopStyle includes new style definitions for IE8 (Microsoft Internet Explorer 8), FF3 (Mozilla FireFox 3), SF3 (Apple Safari 3), and SF4 (Apple Safari 4).</p>
+</blockquote>
+<h3>Insight for scripting languages</h3>
+<blockquote>
+  <p>TopStyle includes Script Insight for <a href="http://en.wikipedia.org/wiki/Active_Server_Pages" target="_blank">ASP</a> (both JavaScript and VBScript), <a href="http://en.wikipedia.org/wiki/Php" target="_blank">PHP</a>, and <a href="http://en.wikipedia.org/wiki/Coldfusion" target="_blank">ColdFusion</a>.</p>
+</blockquote>
+<h3>Code folding</h3>
+<blockquote>
+  <p>In addition to CSS rule collapsing, TopStyle allows you to collapse...</p>
+  <ul>
+    <li>Comments in CSS and HTML</li>
+    <li>PHP and ASP blocks in HTML</li>
+    <li>JavaScript functions and compound statements (such as <code>while</code>, <code>try</code>, and <code>switch</code>)</li>
+  </ul>
+</blockquote>
+<h3>Bookmarks</h3>
+<blockquote>
+  <p>The TopStyle editor context menu contains new commands for navigating your document(s). To display the editor context menu, right-click anywhere in the editor window.</p>
+  <p>Choose <code>Toggle Bookmarks</code> from the editor context menu to set or clear up to 10 bookmarked locations in each document you have open in the editor. Bookmarks let you save your place within a long document. You can also press Ctrl+Shift and the number of the bookmark to set or change the location of a bookmark. When a bookmark is set, you see a box in the left margin of the editor with the bookmark number in it.</p>
+  <p>Choose <code>Goto Bookmarks</code> from the editor context menu to display a list of bookmarked locations you can jump to in the editor. You can also jump to bookmarks by typing Ctrl + the number of the bookmark.</p>
+</blockquote>
+<h3>iPhone (and iPod touch) web app development</h3>
+<blockquote>
+  <p>TopStyle includes iWebKit 4, a simple and advanced development framework for iPhone (and iPod touch) web apps:</p>
+  <ul>
+    <li>Start a new iWebKit 4 project via <code>File &gt; New Site &gt; iWebKit</code>.</li>
+    <li>Add a new iWebKit 4 page to your site via <code>File &gt; New HTML Document &gt; iWebKit</code>. </li>
+    <li>the new HTML toolbar contains an iWebKit tab, providing easy access to most of the commonly used iWebKit elements (such as navigation buttons, menus, lists, form elements, etc). </li>
+  </ul>
+  <p>In addition to iWebKit, TopStyle includes new CSS definitions for Apple's mobile Safari (iPhone OS 1.1 and iPhone OS 2.0). </p>
+  <p>Last but not least, TopStyle includes a new *internal* preview for Apple Safari. </p>
+</blockquote>
+<h3>Improved inline style</h3>
+<blockquote>
+  <p>Inline style attributes (eg. style="|") support CSS color-coding and Style Insight (Ctrl+Space).</p>
+</blockquote>
+<h3>IE8 document compatibility</h3>
+<blockquote>
+  <p>TopStyle allows you to change the current <a href="http://msdn.microsoft.com/en-us/library/cc288325(VS.85).aspx" target="_blank">IE8 document compatibility</a> mode (you can select a mode from the document compatibility list under TopStyle's HTML menu).</p>
+  <p>TopStyle's full screen preview (F12) enables experimenting with different <a href="http://msdn.microsoft.com/en-us/library/cc288325(VS.85).aspx" target="_blank">IE8 document compatibility</a> modes, so you can see how they affect the rendering of your pages. Because the full screen preview may be split in two panels, each preview panel has its own IE8 document compatibility mode!</p>
+</blockquote>
+<h3>HTML5</h3>
+<blockquote>
+  <p>TopStyle contains a new HTML definition for HTML5, and supports the new !DOCTYPE for HTML5.</p>
+</blockquote>
+<h3>Improved CSS Insight</h3>
+<blockquote>
+  <ul>
+    <li>includes recently used colors (CSS color properties only)</li>
+    <li>(sub)property values are grouped (CSS shorthand properties only)</li>
+  </ul>
+</blockquote>
+<h3>Live spelling (HTML-only)</h3>
+<blockquote>
+  <p>TopStyle identifies spelling errors as you type with wavy red underlines, and allows you to act upon each identified problem with a new context menu.</p>
+</blockquote>
+<h3>New HTML templates</h3>
+<blockquote>
+  <p>TopStyle includes new (HTML) templates for HTML5, ASP JavaScript, ASP VBScript, ASP.NET C#, and ASP.NET VB.</p>
+</blockquote>
+<h3>Support for the latest web browsers</h3>
+<blockquote>
+  <p>TopStyle auto-detects the latest (external) browsers, including Mozilla Firefox, Apple Safari, Opera, and Google Chrome.</p>
+  <p>Additionally, the (internal) preview for Mozilla Gecko (Mozilla FireFox) has been updated to support the latest version of Mozilla Gecko (Mozilla FireFox).</p>
+</blockquote>
+<h3>Improved PHP support</h3>
+<blockquote>
+  <p>Inside PHP <a href="http://en.wikipedia.org/wiki/HEREDOC#PHP" target="_blank">HEREDOCs</a>, TopStyle will display its Tag Inspector (or Inline Style Inspector) and HTML Insight when you're adding/editing HTML tags.</p>
+</blockquote>
+<h3>Improved CSE HTML Validator integration</h3>
+<blockquote>
+  <p>TopStyle includes improved integration with <a href="http://www.htmlvalidator.com" target="_blank">CSE HTML Validator</a>, including HTML link checking. </p>
+</blockquote>
+<h3>Updated HTML Tidy</h3>
+<blockquote>
+  <p>TopStyle includes the latest release of HTML Tidy, and supports all the latest HTML Tidy configuration options.</p>
+</blockquote>
+<h3>Look &amp; Feel </h3>
+<blockquote>
+  <p>TopStyle supports (Windows) XP themes, and provides a better visual user-interface experience on Windows XP, Windows Vista, and Windows 7.</p>
+</blockquote>
+<hr />
+<h1>TopStyle 3.5 Release Notes</h1>
+<div id="build35">build 3.5.0.9 / October 15, 2007</div>
+<h2>Changes in Version 3.5</h2>
+<ul>
+  <li>Added: &quot;Box Spy&quot; - exposes an HTML tag&#39;s margins, padding and content box as you mouse over it in the preview</li>
+  <li>Added: External URLs may now be used as preview files when editing CSS documents (IE only) (28922)</li>
+  <li>Added: &quot;Find in Files&quot; now supports replace (<code>Edit &gt; Find/Replace in Files</code>)</li>
+  <li>Added: Style definition for Firefox 2 (73921)</li>
+  <li>Added: Style definition for Internet Explorer 7</li>
+  <li>Added: Style definition for Safari 2 (36348)</li>
+  <li>Added: Style definition for Opera 9</li>
+  <li>Added: Style definition for Outlook 2007 (HTML email)</li>
+  <li>Added: IE7, FF2 and O9 added to property help</li>
+  <li>Added: Support for PNG images in the thumbnail viewer</li>
+  <li>Added: Site Reports now supports multiple class names within a single class attribute (ex: <code>&lt;p class=&quot;one two three&quot;&gt;</code>). The first time you open a site created in a previous version, TopStyle will quickly scan its HTML files for multiple class names, and if any exist, you&#39;ll be prompted to upgrade the site. Note that the upgrade must be performed in order to open the site in v3.5.</li>
+  <li>Added: Progress bar added to site-related operations (reports, etc.)</li>
+  <li>Added: Insight now displays HTML entities when <strong>&amp;</strong> pressed in content</li>
+  <li>Added: Navigation buttons added to full screen preview (27891)</li>
+  <li>Added: Color picker now enables entering (or pasting) a six-digit hex value (58995)</li>
+  <li>Added: Hitting TAB when text is selected now indents the selected lines of text</li>
+  <li>Added: Preview files dialog now enables multi-select (for deleting multiple preview files)</li>
+  <li>Added: Preview files &quot;Add Url&quot; dialog now automatically inserts &quot;http://&quot;</li>
+  <li>Added: Safari for Windows auto-detected as external browser</li>
+  <li>Added: &quot;Quick Options&quot; added to Options menu and editor context menu</li>
+  <li>Added: Support for printing in color (72294)</li>
+  <li>Added: &quot;Close other tabs&quot; added to editor context menu</li>
+  <li>Added: TopStyle now uses the same error reporting feature that&#39;s used by FeedDemon</li>
+  <li>Added: &quot;Reopen&quot; added to <span class="menu">File</span> menu</li>
+  <li>Added: &quot;Refresh&quot; button added to file panel</li>
+  <li>Added: Performance improvements throughout (hat tip to <a href="http://sourceforge.net/projects/fastmm/">FastMM</a>)</li>
+  <li>Added: Ctrl+M now supports PHP comments</li>
+  <li>Added: Hitting TAB when text is selected now indents the selected lines of text</li>
+  <li>Added: &quot;Automatically check for new versions&quot; added to General page in Options (checks once a week for new versions of TopStyle)</li>
+  <li>Added: &quot;Edit All in Group&quot; added to site summary context menu (ex: opens all files in selected folder)</li>
+  <li>Added: The editor tab tooltip for HTML documents now includes the <code>&lt;title&gt;</code></li>
+  <li>Added: Find/replace in files now enables searching just the current document</li>
+  <li>Added: Confirmation dialog when using &quot;Replace All&quot; now moves to avoid obscuring the selection</li>
+  <li>Added: Find/replace now scrolls the matched text to the middle of the screen, to provide better context</li>
+  <li>Added: Clicking the &quot;Edit&quot; toolbutton below a site report now highlights the selected class or ID in the editor</li>
+</ul>
+<ul>
+  <li>Changed: &quot;File list panel&quot; renamed to &quot;File explorer panel&quot;</li>
+  <li>Changed: The thumbnail viewer is now embedded below the file explorer. Selecting a thumbnail will highlight it in the file list, and selecting an image in the file list will highlight it in the thumbnail viewer.</li>
+  <li>Changed: HTML Tidy (Tidy.exe) upgraded to June 13, 2007 version</li>
+  <li>Changed: Style definitions for Safari 1.0, Opera 8, Netscape 4 (Mac), Konquerer, and Netscape 8 are no longer included in the install (but they won&#39;t be removed if you already have them)</li>
+  <li>Changed: Comment tags no longer inserted when selecting <span class="menu">HTML|Insert Style Block</span></li>
+  <li>Changed: &quot;Remove existing styles before previewing&quot; moved from Options dialog to preview options toolbutton</li>
+  <li>Changed: &quot;File list panel&quot; renamed to &quot;File explorer panel&quot;</li>
+  <li>Changed: Thumbnail viewer moved to file explorer panel</li>
+  <li>Changed: Color values (both named and hex) are now inserted in lowercase by default (this can be changed on the &quot;Colors&quot; page in TopStyle&#39;s options)</li>
+  <li>Changed: When &quot;auto-convert special characters&quot; is enabled, the conversion is now skipped when typing inside a comment</li>
+</ul>
+<ul>
+  <li>Fixed: TopStyle&#39;s help fails to load on Windows Vista (75255)</li>
+  <li>Fixed: &quot;Color grabber&quot; (eyedropper icon) in TopStyle&#39;s color picker fails on Windows Vista (95879)</li>
+  <li>Fixed: Style checker incorrectly flags &#39;inline-block&#39; as an invalid display value in CSS 2.1 (52804)</li>
+  <li>Fixed: Style checker incorrectly gives generic family name warning when &#39;inherit&#39; used for font-family</li>
+  <li>Fixed: Content-type doesn&#39;t include &#39;text/html&#39; when using W3C HTML Validator (72220)</li>
+  <li>Fixed: Style sweeper removes last declaration in rule when it doesn&#39;t end with a semi-colon (51045)</li>
+  <li>Fixed: Style sweeper fails to move at-rules to the top when sorting selectors logically (78484)</li>
+  <li>Fixed: &quot;Open from Web&quot; needs to insert HTML comment after DOCTYPE or XML prolog, and CSS comment after @charset declaration (52460)</li>
+  <li>Fixed: Find dialog doesn&#39;t accommodate user-modified system font sizes (50155)</li>
+  <li>Fixed: TopStyle may start partially obscured on multimon systems when secondary monitor is &quot;higher&quot; than the primary (49389)</li>
+  <li>Fixed: Exception when loading trial version if older version of TopStyle Lite installed after installing trial version (63211)</li>
+  <li>Fixed: Embedded browser doesn&#39;t support <code>Ctrl+C</code> and other standard shortcuts (63743)</li>
+  <li>Fixed: Class names containing hyphens aren&#39;t color-coded correctly (61205)</li>
+  <li>Fixed: Can&#39;t cut, copy or paste color values in color picker</li>
+  <li>Fixed: Files with no extension can&#39;t be opened from the file panel (69428)</li>
+  <li>Fixed: Default keyboard shortcuts can be deleted (72183)</li>
+  <li>Fixed: Access violation when using TopStyle over VNC (71285)</li>
+  <li>Fixed: Clicking +/- buttons in palette editor selects that color in the editor (50731)</li>
+  <li>Fixed: Changes aren&#39;t reflected when &quot;Synchronize the preview with editor position&quot; is enabled and IE7 is installed</li>
+  <li>Fixed: Status bar shows the wrapped line number instead of the unwrapped line number when word-wrap is enabled (30539)</li>
+  <li>Fixed: Form controls don&#39;t reflect current XP theme</li>
+  <li>Fixed: Insight doesn&#39;t accommodate multiple class names (35819)</li>
+  <li>Fixed: Files which use the Mac EOL format are converted to PC EOL format when saved in TopStyle</li>
+  <li>Fixed: Opera 9 not auto-detected as external browser</li>
+  <li>Fixed: Safari for Windows doesn&#39;t show current document when selected from external browser list</li>
+  <li>Fixed: Install fails to warn when TopStyle is already running</li>
+  <li>Fixed: TopStyle Lite consistently fails to start on limited accounts</li>
+  <li>Fixed: Refresh toolbutton on file panel doesn&#39;t refresh folders</li>
+  <li>Fixed: Invalid thumbnail images show up as empty boxes (changed to write &quot;Error&quot; on the thumbnail)</li>
+  <li>Fixed: Thumbnail viewer shows wrong size when large fonts are used (102914)</li>
+  <li>Fixed: Auto-generated CSS preview doesn&#39;t handle definition lists correctly (104260)</li>
+  <li>Fixed: Hex values typed into the color picker don&#39;t honor the &quot;Lowercase hexadecimal color values&quot; setting</li>
+  <li>Fixed: Crash at closing when preview is showing an active embedded object (such as a running YouTube video)</li>
+  <li>Fixed: Panel captions too large when using large fonts</li>
+  <li>Fixed: Thumbnail viewer doesn&#39;t reload when hitting refresh</li>
+  <li>Fixed: &quot;Edit Preview Files&quot; doesn&#39;t show filenames in tooltip</li>
+  <li>Fixed: &quot;Edit Preview Files&quot; leaves multiple files selected after re-ordering</li>
+  <li>Fixed: Error when checking for hyperlink at cursor (99261)</li>
+  <li>Fixed: Error attempting to make TopStyle the default CSS editor under non-admin Vista (102104)</li>
+  <li>Fixed: Error adding TopStyle to IE&#39;s list of HTML editors under non-admin Vista (107382)</li>
+  <li>Fixed: Exception when clicking an empty link in the preview</li>
+  <li>Fixed: TopStyle&#39;s &quot;user&quot; folder not always successfully copied to &quot;Application Data&quot; folder when the multi-user install option was chosen</li>
+  <li>Fixed: &quot;File in use&quot; error when style sheet displayed in dual full screen preview</li>
+  <li>Fixed: Color-coding of <code>&lt;link&gt;</code> tags doesn&#39;t account for embedded PHP/ASP</li>
+  <li>Fixed: Invalid <code>&lt;script&gt;</code> tag inserted when JavaScript filed drag-and-dropped onto XHTML document</li>
+  <li>Fixed: Color picker shows previous color selection</li>
+  <li>Fixed: &quot;Read only file&quot; warnings in message panel appear under the wrong filename when doing a replace in files</li>
+  <li>Fixed: Insight for the current CSS property doesn&#39;t automatically appear if there are no spaces between the cursor position and the close brace</li>
+  <li>Fixed: Sibling selectors incorrectly appear in orphan classes report</li>
+  <li>Fixed: Style Sweeper adds extra &quot;;&quot; to end of style rule when preceded by a comment</li>
+  <li>Fixed: Style Sweeper removes double-spacing inside comments even when &quot;remove blank lines&quot; isn&#39;t selected</li>
+  <li>Fixed: Style Sweeper removes comments that appears right after a declaration if immediately preceded by another comment</li>
+  <li>Fixed: Style Sweeper fails to correctly indent comments that appear above indented declaration</li>
+  <li>Fixed: Style Sweeper removes comments that appear before a declaration&#39;s semi-colon when reformatting color values</li>
+  <li>Fixed: Can&#39;t use Ctrl+C in site reports editor</li>
+  <li>Fixed: If a style rule isn&#39;t closed, subsequent rules don&#39;t color-code correctly even after typing a &quot;}&quot; to close the rule</li>
+  <li>Fixed: When building a site, @import statements are ignored in HTML documents which use Eric Meyer&#39;s <a href="http://www.ericmeyeroncss.com/bonus/trick-hide.html">highpass filter hack</a> (109347)</li>
+  <li>Fixed: &quot;Find/Replace in Files&quot; fails with search strings longer than 255 characters</li>
+  <li>Fixed: File error when switching between embedded IE and the Mozilla Control</li>
+  <li>Fixed: Crash under Windows Vista when using the default style preview if the current style sheet contains an <code>applet</code> selector</li>
+</ul>
+</body>
+</html>
