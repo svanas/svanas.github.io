@@ -13,6 +13,18 @@
 					<key>url</key>
 					<string>https://svanas.github.io/apps/IOB.ipa</string>
 				</dict>
+				<dict>
+					<key>kind</key>
+					<string>display-image</string>
+					<key>url</key>
+					<string>https://svanas.github.io/apps/IOB.png</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>full-size-image</string>
+					<key>url</key>
+					<string>https://svanas.github.io/apps/IOB.ipa</string>
+				</dict>
 			</array>
 			<key>metadata</key>
 			<dict>
