@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--------------------------- required meta tags -------------------------->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+
+    <link href="data:," rel="icon">
+    <title>Inheritance</title>
+
+    <!---------------- jQuery 3.7.1 first, then Bootstrap 5.3.8 --------------->
+    <script src="vendors/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link href="vendors/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-------------------------------- Notyf ---------------------------------->
+    <script src="vendors/notyf/notyf.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="vendors/notyf/notyf.min.css">
+
+    <!------------------------- web3 & ethers 6.15.0 -------------------------->
+    <script type="module" src="web3modal.js"></script>
+    <script type="module">
+      import { ethers } from "./vendors/ethers/ethers.min.js";
+      window.ethers = ethers;
+    </script>
+
+    <!-------------------------------- project -------------------------------->
+    <script src="config.js" type="text/javascript"></script>
+    <script src="inheritance.js" type="text/javascript"></script>
+    <link href="inheritance.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="header">
+        <div class="header-left"></div>
+        <div class="header-right d-flex gap-2">
+          <button id="btnConnect" class="btn btn-primary" style="width: 110px" disabled>Connect</button>
+          <button id="btnAccount" class="btn btn-secondary" style="width: 140px" disabled>0x0000..00</button>
+          <button id="btnNetwork" class="btn btn-secondary" style="width: 100px" disabled>Ethereum</button>
+          <p id="currBlock" style="margin: 0; align-self: center"></p>
+        </div>
+      </div>
+      <div class="sidebar">
+        <p><a href="#/TfrmMain"><button class="btn btn-primary" style="width: 110px">Home</button></a></p>
+        <p><a href="#/TfrmHeirs"><button class="btn btn-primary" style="width: 110px">Heirs</button></a></p>
+        <p><a href="#/TfrmDeposit"><button class="btn btn-primary" style="width: 110px">Deposit</button></a></p>
+        <p><a href="#/TfrmWithdraw"><button class="btn btn-primary" style="width: 110px">Withdraw</button></a></p>
+      </div>
+      <div class="main" id="content"></div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function run() {
+      if (window.ethers) {
+        rtl.run();
+      } else {
+        setTimeout(run, 1);
+      }
+    }
+    run();
+  </script>
+</html>
