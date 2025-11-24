@@ -30,3 +30,7 @@ body, html {
   position: relative;
   padding: 1rem;
 }
+
+.monotype {
+  font-family: "Consolas", "Menlo", "SF Mono", "DejaVu Sans Mono", "Courier New", monospace;
+}
